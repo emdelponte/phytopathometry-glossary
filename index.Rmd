@@ -55,7 +55,7 @@ Bock CH, Pethybridge SJ, Barbedo JGA, Esker PD, Mahlein AK, Del Ponte EM
 consistency and precision in intra- and inter-disciplinary dialogues.
 Tropical Plant Pathology. In Press
 
-## Column {.tabset data-width="1800px" data-height="500px"}
+## Column {.tabset data-width="2100px" data-height="500px"}
 
 ### Browse terms
 
@@ -66,7 +66,7 @@ library(DT)
 datatable(sd, 
           escape = FALSE,
           class = 'cell-border stripe',
-        rownames = FALSE, colnames = c('Term','Description'), 
+        rownames = FALSE, colnames = c('Term','Description', 'Portuguese', 'Spanish'), 
           options = list(
   pageLength = 50,
   fontSize = 9,
@@ -75,7 +75,7 @@ datatable(sd,
   lengthMenu = c(25, 50, 100, 500 )
 ))%>%
 formatStyle(
-  c('term', 'description'),
+  c('term', 'description', 'Portuguese', 'Spanish'),
   fontSize = '100%')
 
 ```
