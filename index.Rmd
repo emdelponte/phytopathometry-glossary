@@ -50,12 +50,35 @@ valueBox(articles,  icon = "fa-pencil")
 ```
 
 
+
 ### All terms
 
 ```{r}
-filter_select("term", "", sd, ~term, multiple = TRUE)
+filter_select("term", "", sd, ~term, multiple = FALSE)
 ```
    
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<button onClick="history.go(0);">Show all</button>
+
+  
+
+
+
+
+
+  
+  
+**Citation:**  
+
+Bock CH, Pethybridge SJ, Barbedo JGA, Esker PD, Mahlein AK, Del Ponte EM (2021) A phytopathometry glossary for the 21 st century: towards consistency and precision in intra- and inter-disciplinary dialogues. Tropical Plant Pathology. In Press
+
    
 Column {data-width=1500px data-height=500px}
 -------------------------------------
@@ -73,7 +96,7 @@ datatable(sd,
           class = 'cell-border stripe',
         rownames = FALSE, colnames = c('Term','Description'), 
           options = list(
-  pageLength = 10,
+  pageLength = 50,
   fontSize = 9,
   style = "bootstrap4",
 
