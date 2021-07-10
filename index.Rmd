@@ -4,7 +4,7 @@ output:
   flexdashboard::flex_dashboard:
     theme: 
       version: 4
-      bootswatch: simplex
+      bootswatch: yeti
     social: menu
 editor_options: 
   markdown: 
@@ -63,6 +63,8 @@ Tropical Plant Pathology. In Press
 
 ### Browse terms
 
+
+
 ```{r}
 library(DT)
 datatable(sd, 
@@ -82,24 +84,25 @@ formatStyle(
 
 ```
 
+
 ### Introduction to the glossary
 
 <div style="margin:30px">
 The two synonymous terms **"Plant Pathometry"** or **"Phytopathometry"**
 were first coined by Large (1953, 1966). Phytopathometry as defined by
-Nutter et al. (1991) equates with "disease assessment" and is the branch
+Nutter et al. (1991) equates with **"disease assessment"** and is the branch
 of the discipline of Phytopathology that deals with estimation or
 measurement of the amount of plant disease (broadly encompassing
-detection, identification and quantification). Large (1953) stated "At
+detection, identification and quantification). Large (1953) stated *"At
 this point what we have been calling 'disease measurement' or 'disease
 assessment' enters a new phase. It becomes a systematized and
 specialized method of mensuration with a derived superstructure. In
 short, it becomes a branch of plant pathological science, and I think it
 deserves a better name. The name that I would now, and hereby, propose
 for it is 'Plant Pathometry', from pathos, disease or suffering, and
-metron, measure." In the article, Large provides examples (including
-late blight of potato and choke of cocksfoot) where the new science of
-phytopathometry was a basis for obtaining valuable information from
+metron, measure."* 
+
+In the article, Large provides examples (including late blight of potato and choke of cocksfoot) where the new science of phytopathometry was a basis for obtaining valuable information from
 plant disease surveys. Thus, phytopathometry may be considered the
 branch of the discipline of phytopathology concerned with detection,
 identification, and quantification of disease symptoms, or signs of a
@@ -172,8 +175,9 @@ section within reference or teaching texts on plant disease epidemiology
 been at the forefront of the research related to phytopathometry,
 particularly related to development and evaluation of methods,
 phytopathometry is, as noted, critical to many other plant
-pathology-related areas of science. Based on the history of
-phytopathometry, its application, and the statements quoted from Large
+pathology-related areas of science. 
+
+Based on the history of phytopathometry, its application, and the statements quoted from Large
 (1966) we contend that phytopathometry is concerned with the science of
 the measurement of plant disease. But phytopathometry is not subservient
 to the branches of epidemiology or yield loss, although it provides a
@@ -206,7 +210,9 @@ new horizons for phytopathometry, especially for obtaining objective
 measures of the quantity of plant disease. It has been 20 years since
 there was a glossary of terms and concepts used in phytopathometry
 (Nutter 2001), which was based on a similar sentinel work 10 years
-earlier (Nutter et al. 1991). The 1991 glossary was proposed after the
+earlier (Nutter et al. 1991). 
+
+The 1991 glossary was proposed after the
 first phase of quantitative research on plant disease assessment (1970
 to 1990). It also presented concepts and terms from the perspective of
 quantifying crop loss and did not consider the many other purposes of
@@ -229,11 +235,13 @@ specialists (Mahlein 2016).
 Before providing the updated and revised list of concepts and
 definitions, there are two terms that need to be clearly defined, with
 rationale, as they are so pivotal to phytopathometry and the practice of
-plant pathology. The first is "disease measurement". Historically this
+plant pathology. The first is **"disease measurement"**. Historically this
 has referred to visual estimates of plant disease (Large 1966). However,
 with the advent of sensor-based technology, disease can now be actually
 and accurately measured based on pixels or wave bands with healthy or
-diseased characteristics. Thus, we contend that disease measurement
+diseased characteristics. 
+
+Thus, we contend that disease measurement
 refers to those assessments made only using sensors -- and may refer to
 the number of individuals diseased, counts of a disease symptom on an
 organ, or the proportional quantity of disease on an individual
@@ -241,7 +249,7 @@ specimen. In contrast, a "disease estimate" is one obtained through
 visual disease assessment, most commonly referring to estimates of the
 proportional quantity of disease on a specimen (but could be count-based
 data). The second term requiring discussion is "disease severity". Here,
-we define disease severity as the "degree to which a specimen (plant or
+we define **disease severity** as the "degree to which a specimen (plant or
 plant part) is diseased. Severity may be described quantitatively on a
 scale or as a proportion of the unit area diseased (commonly a
 percentage), the number of lesions present, or a ranked numeric order of
@@ -257,8 +265,7 @@ al. 1991), and the metrics of lesion counts or density, and ordinal
 scale based measurements using classes based on ether intervals of the
 percentage scale or descriptions of symptoms as defined in this article.
 
-This definition
-differs from most prior definitions that described severity purely on
+This definition differs from most prior definitions that described severity purely on
 the basis of area diseased -- but many plant diseases show degrees of
 severity without an easily defined area affected (as noted, many
 systemic diseases). Thus, severity is broadened to be applicable to
@@ -278,6 +285,7 @@ metrics as measures of severity as described in numerous journal
 articles. For example, Pethybridge et al. (2020) and Cowling and
 Gilchrist (1980) referred to lesion counts as disease severity -- the
 latter authors also used lesion size as a measure of severity.
+
 Quantitative ordinal scales based on the percentage scale to determine
 quantity of disease are well known and widely used, with the stated
 purpose of rating disease severity (Horsfall and Barratt 1945; Kousik et
@@ -306,7 +314,6 @@ in some cases (e.g. incidence) may have different meanings in other
 disciplines.
 
 
-
 <img src = "fig3.png" width = 650px>
 
 
@@ -327,7 +334,9 @@ list below is compiled by the authors without specific societal
 authority, but with the common purpose of bringing together in a single
 source, an updated and comprehensive (as of 2021) list of terms,
 definitions and concepts currently used or making debuts in
-phytopathometry. This glossary includes 128 terms, which is an increment
+phytopathometry. 
+
+This glossary includes 128 terms, which is an increment
 compared to the original glossary that had 58 terms, and which included
 terms and concepts related to yield loss measurement. Finally, usage in
 the historic literature may vary depending on era and subdiscipline.
