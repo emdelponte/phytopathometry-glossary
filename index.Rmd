@@ -61,7 +61,7 @@ Tropical Plant Pathology. In Press
 
 ## Column {.tabset data-width="1500px" data-height="500px"}
 
-### Terms
+### Browse terms
 
 ```{r}
 library(DT)
