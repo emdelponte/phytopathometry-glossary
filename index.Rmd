@@ -1,0 +1,93 @@
+---
+title: "Glossary of Phytopathometry"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: 
+      version: 4
+      bootswatch: simplex
+    social: menu
+
+      
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(flexdashboard)
+library(janitor)
+library(readxl)
+library(cowplot)
+library(see)
+library(plotly)
+library(gsheet)
+library(crosstalk)
+
+glossary <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bhFJKizExY5NIHZY2cOLvfuuPFZJAOnjTmkCLh2ylEw/edit?usp=sharing")
+
+
+sd <- SharedData$new(glossary)
+
+```
+
+
+
+Column 
+-------------------------------------
+    
+
+    
+```{r}
+```
+
+
+Row
+--------------
+
+### Number of Terms
+
+```{r}
+articles <- nrow(glossary)
+valueBox(articles,  icon = "fa-pencil")
+```
+
+
+### All terms
+
+```{r}
+filter_select("term", "", sd, ~term, multiple = TRUE)
+```
+   
+   
+Column {data-width=1500px data-height=500px}
+-------------------------------------
+   
+   
+   
+### Phytopathometry Glossary
+
+
+
+```{r}
+library(DT)
+datatable(sd, 
+          escape = FALSE,
+          class = 'cell-border stripe',
+        rownames = FALSE, colnames = c('Term','Description'), 
+          options = list(
+  pageLength = 10,
+  fontSize = 9,
+  style = "bootstrap4",
+
+  lengthMenu = c(25, 50, 100, 500 )
+))%>%
+formatStyle(
+  c('term', 'description'),
+  fontSize = '100%')
+
+```
+ 
+Column 
+-------------------------------------
+
+```{r}
+```
+   
