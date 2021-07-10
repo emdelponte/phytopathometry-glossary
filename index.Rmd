@@ -1,14 +1,13 @@
 ---
-title: "Glossary of Phytopathometry"
+title: "Phytopathometry glossary"
 output: 
   flexdashboard::flex_dashboard:
     theme: 
       version: 4
+      navbar-bg: "#1E4571"
       bootswatch: yeti
     social: menu
-editor_options: 
-  markdown: 
-    wrap: 72
+
 ---
 
 ```{r setup, include=FALSE}
@@ -29,10 +28,7 @@ sd <- SharedData$new(glossary)
 
 ```
 
-## Column
 
-```{r}
-```
 
 ## Row
 
@@ -59,7 +55,7 @@ Bock CH, Pethybridge SJ, Barbedo JGA, Esker PD, Mahlein AK, Del Ponte EM
 consistency and precision in intra- and inter-disciplinary dialogues.
 Tropical Plant Pathology. In Press
 
-## Column {.tabset data-width="1500px" data-height="500px"}
+## Column {.tabset data-width="1800px" data-height="500px"}
 
 ### Browse terms
 
