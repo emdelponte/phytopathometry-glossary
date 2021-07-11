@@ -1,19 +1,16 @@
 ---
 title: "Phytopathometry Glossary"
+subtitle: "Towards consistency and precision in intra- and inter-disciplinary dialogues"
 author: ""
 date: ""
-output: html_document
+output: 
+  html_document: 
+    theme: flatly
 ---
 
 ```{r setup, include=FALSE}
 
 library(tidyverse)
-library(flexdashboard)
-library(janitor)
-library(readxl)
-library(cowplot)
-library(see)
-library(plotly)
 library(gsheet)
 library(crosstalk)
 
@@ -33,9 +30,12 @@ sd <- SharedData$new(glossary)
 bscols(
   widths = c(8, 4),
   filter_checkbox("letter", "", sd, ~letter, inline = TRUE),
-  filter_select("term", "All terms", sd, ~term, multiple = FALSE)
+  filter_select("term", "All 128 terms", sd, ~term, multiple = FALSE)
 )
 ```
+
+
+
 
 
 ```{r echo=FALSE}
