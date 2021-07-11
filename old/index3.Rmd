@@ -1,0 +1,81 @@
+---
+title: "Phytopathometry glossary"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: 
+      version: 4
+      navbar-bg: "#1E4571"
+      bootswatch: yeti
+    social: menu
+
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(flexdashboard)
+library(janitor)
+library(readxl)
+library(cowplot)
+library(see)
+library(plotly)
+library(gsheet)
+library(crosstalk)
+
+glossary <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bhFJKizExY5NIHZY2cOLvfuuPFZJAOnjTmkCLh2ylEw/edit?usp=sharing")
+
+
+sd <- SharedData$new(glossary)
+
+```
+
+Column {data-width=300}
+-------------------------------------
+    
+
+
+
+    
+Column {.tabset}
+-------------------------------------
+    
+### Chart 1
+    
+```{r}
+filter_select("term", "", sd, ~term, multiple = FALSE)
+```
+   
+```{r}
+library(DT)
+datatable(sd, 
+          escape = FALSE,
+          class = 'cell-border stripe',
+        rownames = FALSE, colnames = c('Term','Description', 'Portuguese', 'Spanish'), 
+          options = list(
+  pageLength = 5,
+  fontSize = 9,
+  style = "bootstrap4",
+
+  lengthMenu = c(25, 50, 100, 500 )
+))%>%
+formatStyle(
+  c('term', 'description', 'Portuguese', 'Spanish'),
+  fontSize = '100%')
+
+```   
+   
+   
+### About  
+
+<div style="margin:30px">
+
+**Article abstract**
+
+Phytopathometry can be defined as the branch of plant pathology (phytopathology) that is concerned with estimation or measurement of the amount of plant disease expressed by symptoms of disease, or signs of a pathogen, on a single, or group of specimens. Phytopathometry is critical for many reasons, including analyzing yield loss due to disease, breeding for disease resistance, evaluating and comparing disease control methods, understanding coevolution, and studying disease epidemiology and pathogen ecology. Phytopathometry underpins all activities in plant pathology and extends into related disciplines, such as agronomy, horticulture, and plant breeding. Considering this central role, phytopathometry warrants status as a formally recognized branch of plant pathology. The glossary defines terms and concepts used in phytopathometry based on disease symptoms or visible pathogen structures, and includes those terms commonly used in visual estimation of disease severity, and sensor -based methods of disease measurement. Relevant terms from the intersecting disciplines of measurement science, statistics, psychophysics, robotics and artificial intelligence are also included. In particular, a new, broader, definition is proposed for “disease severity”, and the terms “disease measurement” and “disease estimate” are specifically defined. It is hoped the glossary contributes to a more unified cross-discipline approach to research in, and application of the tools available to phytopathometry. 
+
+</div>   
+   
+   
+Column {data-width=300}
+-------------------------------------
+   
+

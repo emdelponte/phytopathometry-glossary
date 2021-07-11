@@ -1,0 +1,50 @@
+---
+title: ""
+author: ""
+date: "7/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+library(tidyverse)
+library(flexdashboard)
+library(janitor)
+library(readxl)
+library(cowplot)
+library(see)
+library(plotly)
+library(gsheet)
+library(crosstalk)
+
+glossary <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1bhFJKizExY5NIHZY2cOLvfuuPFZJAOnjTmkCLh2ylEw/edit?usp=sharing")
+
+
+sd <- SharedData$new(glossary)
+
+```
+
+<br> <br>
+
+![](logo.png)
+
+```{r echo=FALSE}
+
+filter_checkbox("letter", "Letter", sd, ~letter, inline = TRUE)
+
+
+```
+
+<br> <br>
+
+```{r echo=FALSE}
+library(reactable)
+reactable(sd,
+          searchable = TRUE, 
+          defaultPageSize = 5,
+          borderless = TRUE,
+          pagination = TRUE, 
+          highlight = FALSE, 
+          height = 500)
+
+```
