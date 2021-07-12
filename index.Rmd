@@ -1,6 +1,5 @@
 ---
 title: "Phytopathometry Glossary"
-subtitle: "Towards consistency and precision in intra- and inter-disciplinary dialogues"
 author: ""
 date: ""
 output: 
@@ -19,8 +18,6 @@ glossary <- glossary %>%
   select(term, description, letter)
 sd <- SharedData$new(glossary)
 ```
-
-<br><br>
 
 ##  {.tabset}
 
@@ -42,11 +39,11 @@ bscols(
 library(reactable)
 reactable(sd,
   searchable = TRUE,
-  defaultPageSize = 5,
+  defaultPageSize = 6,
   borderless = TRUE,
   pagination = TRUE,
   highlight = FALSE,
-  height = 400,
+  height = 500,
   columns = list(
     letter = colDef(minWidth = 15),
     term = colDef(minWidth = 35)
